@@ -1,0 +1,27 @@
+.heading-container {
+  text-align: start;
+  margin: 10px 20px;
+}
+
+.heading-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--heading);
+  margin-bottom: 10px;
+}
+
+.heading-subtitle {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .heading-title {
+    font-size: 1.2em;
+  }
+
+  .heading-subtitle {
+    font-size: 0.8em;
+  }
+}

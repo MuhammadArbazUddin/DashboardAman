@@ -1,0 +1,186 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  background-color: #ffffff;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 240px; /* Align with the sidebar width */
+  right: 0;
+  z-index: 1000;
+}
+
+.topbar-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.create-button {
+  background-color: #f5f5f5;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #e0e0e0;
+}
+
+.create-icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.arrow-down {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.topbar-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #a0a0a0;
+}
+
+.search-icon {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* Make the language selector the reference point */
+}
+
+.language-selector:hover {
+  background-color: #e0e0e0;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 150px;
+  z-index: 1500;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Animation transition */
+  max-height: 0; /* Start with 0 height */
+  opacity: 0; /* Invisible by default */
+}
+
+.language-dropdown.open {
+  max-height: 200px; /* Set a max-height to enable animation */
+  opacity: 1; /* Make it visible */
+}
+
+.language-option {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #343a40;
+}
+
+.language-option:hover {
+  background-color: #f1f1f1;
+}
+
+.language-flag {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.arrow-down {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.language-flag {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.notification-icon {
+  position: relative;
+  margin-right: 15px;
+  font-size: 22px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.notification-icon:hover {
+  color: var(--secondary);
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.settings-icon {
+  font-size: 22px;
+  color: #343a40;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.settings-icon:hover {
+  color: #888;
+}

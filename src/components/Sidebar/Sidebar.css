@@ -1,0 +1,115 @@
+/* Sidebar container */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #465048;
+  color: #ecf0f1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative; /* For relative positioning of collapse button */
+}
+
+.sidebar-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.collapse-button {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, left 0.3s ease; /* Smooth transition for the button */
+  position: absolute;
+  top: 50%;
+  left: 180px; /* Adjust button position relative to the expanded width */
+  transform: translateY(-50%);
+}
+
+/* Button position in collapsed state */
+.sidebar.collapsed .collapse-button {
+  left: 20px; /* Adjust button position relative to the collapsed width */
+}
+
+/* Sidebar list and links */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-list li {
+  margin-bottom: 20px;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #bdc3c7;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sidebar-link:hover {
+  background-color: #596b5dd3;
+  color: #ecf0f1;
+}
+
+.sidebar-icon {
+  margin-right: 12px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sidebar.collapsed .sidebar-icon {
+  margin-right: 0;
+}
+
+/* Active link styles */
+.sidebar-link.active {
+  background-color: var(--primary);
+  color: #ecf0f1;
+  font-weight: bold;
+}
+
+/* Smooth transition for sidebar width */
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-link span {
+  display: none;
+}
+
+/* Hide text when collapsed */
+.sidebar.collapsed .sidebar-link .sidebar-icon + span {
+  display: none;
+}

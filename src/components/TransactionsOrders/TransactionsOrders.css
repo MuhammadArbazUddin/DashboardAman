@@ -1,0 +1,101 @@
+.transactions-orders-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.latest-transactions,
+.latest-orders {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+td,
+th {
+  padding: 15px;
+  text-align: left;
+}
+
+td:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+th:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-status,
+.order-status {
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.transaction-status.confirm,
+.order-status.delivered {
+  background-color: #00c853;
+}
+
+.transaction-status.waiting,
+.order-status.shipped {
+  background-color: #fbc02d;
+}
+
+.transaction-status.expired,
+.order-status.cancel {
+  background-color: #d32f2f;
+}
+
+.edit-button {
+  background-color: #607d8b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #455a64;
+}
+
+@media (max-width: 768px) {
+  .transactions-orders-container {
+    flex-direction: column;
+  }
+
+  .latest-transactions,
+  .latest-orders {
+    margin-bottom: 20px;
+  }
+}
